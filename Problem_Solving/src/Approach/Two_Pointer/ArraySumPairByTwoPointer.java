@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ArraySumPair {
+public class ArraySumPairByTwoPointer {
 
     // Method to find pairs whose sum equals the target value
     public static int[][] findPairs(int[] arr, int target) {
@@ -65,7 +65,7 @@ public class ArraySumPair {
     }
 
     // Recursive helper method to find all combinations
-    private static void findAllCombinations(List<List<Integer>> combinations, List<Integer> currentCombination, int[] arr, int target, int start) {
+    public static void findAllCombinations(List<List<Integer>> combinations, List<Integer> currentCombination, int[] arr, int target, int start) {
         if (target < 0) {
             // Base case: target value exceeded, backtrack
             return;
