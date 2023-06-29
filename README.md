@@ -15,7 +15,17 @@ array.
 
      Merge Into a single Array : [-6,-4,1,2,2,2,3,8];
 
-     Second Combination For “8” : [ [ 1,3,2,2], [8,-4,2,2],....,[n,n,n,n] ]
+     Second Combination For “8” : [[-6, -2, 1, 2, 2, 3, 8], 
+                              [-6, 1, 2, 3, 8], 
+                              [-6, 1, 2, 3, 8], 
+                              [-4, -2, 1, 2, 3, 8], 
+                              [-4, -2, 1, 2, 3, 8], 
+                              [-4, 1, 3, 8], 
+                              [-4, 2, 2, 8], 
+                              [-2, 2, 8], 
+                              -2, 2, 8], 
+                              [1, 2, 2, 3], 
+                              [8]]
 
 # Explanation of Code
 ### 1. `ArraySumPairByHashMap`
@@ -309,3 +319,26 @@ This Java program finds pairs and combinations in an array of integers based on 
   - <b> Space Complexity:</b>  O(2^n), where n is the length of the input array nums. This is because the method uses a recursive approach that creates a new combination list for each recursion.
 
 Overall,the time and space complexity of the program is dominated by the `findDoubleTargetCombination` method.
+
+- <b> ArraySumPairByTwoPointer</b>
+<b> 1. `findPairs` method: </b>
+
+- <b>Time Complexity:</b> O(n log n), where n is the length of the input array. The time complexity is dominated by the sorting operation using `Arrays.sort`.
+- <b> Space Complexity:</b> O(n), where n is the length of the input array. The space is used to store the result pairs, which can be at most n/2 pairs.
+  
+<b> 2. `mergeAndSort` method:</b>
+
+- <b>Time Complexity:</b> O(n log n), where n is the total number of elements in the pairs. The time complexity is dominated by the sorting operation using `mergedList.sort`.
+- <b> Space Complexity: </b> O(n), where n is the total number of elements in the pairs. The space is used to store the merged list of pairs.
+  
+<b> 3. `findCombinations` method: </b>
+
+- <b>Time Complexity: </b> O(2^n), where n is the length of the input array. In the worst case, the method explores all possible combinations of the array elements.
+- <b> Space Complexity: </b> O(2^n), where n is the length of the input array. The space is used to store all the possible combinations.
+  
+<b> 4. `findAllCombination`s method (recursive helper method for `findCombinations`): </b>
+
+- <b> Time Complexity:</b> O(2^n), where n is the length of the input array. In the worst case, the method explores all possible combinations of the array elements.
+- <b> Space Complexity:</b> O(n), where n is the length of the input array. The space is used for the recursive call stack.
+
+Overall, the time and space complexity of the entire code can be considered as O(2^n) in the worst case, where n is the length of the input array. It is important to note that the space complexity is dependent on the number of combinations explored, which can grow exponentially with the input size.
