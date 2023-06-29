@@ -108,9 +108,7 @@ public class ArraySumPairByTwoPointer {
         int[][] pairs = findPairs(arr, target);
 
         System.out.println("First Combination for \"" + target + "\":");
-        for (int[] pair : pairs) {
-            System.out.println(Arrays.toString(pair));
-        }
+        System.out.println(Arrays.deepToString(pairs));
 
         // Merge pairs into a single array and sort it
         int[] mergedArray = mergeAndSort(pairs);
@@ -121,8 +119,6 @@ public class ArraySumPairByTwoPointer {
         int[][] combinations = findCombinations(arr, target);
 
         System.out.println("Second Combination for \"" + (target * 2) + "\":");
-        for (int[] combination : combinations) {
-            System.out.println(Arrays.toString(combination));
-        }
+        System.out.println(Arrays.deepToString(combinations));
     }
 }

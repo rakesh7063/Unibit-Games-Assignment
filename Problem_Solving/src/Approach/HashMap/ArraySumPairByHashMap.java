@@ -74,9 +74,7 @@ public class ArraySumPairByHashMap {
         // Find combinations of two numbers that sum up to the target
         int[][] twoSumCombination = findTwoSumCombination(nums, target);
         System.out.println("First Combination For \"" + target + "\":");
-        for (int[] combination : twoSumCombination) {
-            System.out.println(Arrays.toString(combination));
-        }
+        System.out.println(Arrays.deepToString(twoSumCombination));
 
         int[] mergedArray = Arrays.stream(nums).sorted().toArray();
         System.out.println("Merge Into a single Array: " + Arrays.toString(mergedArray));
@@ -84,9 +82,10 @@ public class ArraySumPairByHashMap {
         // Find combinations of numbers that sum up to double the target
         int[][] doubleTargetCombination = findDoubleTargetCombination(mergedArray, target);
         int doubleTarget = target * 2;
+
         System.out.println("Second Combination For \"" + doubleTarget + "\":");
-        for (int[] combination : doubleTargetCombination) {
-            System.out.println(Arrays.toString(combination));
-        }
+
+        System.out.println(Arrays.deepToString(doubleTargetCombination));
+
     }
 }
