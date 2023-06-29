@@ -7,7 +7,7 @@ ascending ) order, in the next step double the target value and find again the c
 digits (can be multiple digits ) that are equal to the double targeted value and returned into a 2D
 array.
 
-     Sample Input : [1, 3, 2, 2, -4, -6, -2, 8];
+     Sample Input : Array = [1, 3, 2, 2, -4, -6, -2, 8];
 
      Target Value = 4,
 
