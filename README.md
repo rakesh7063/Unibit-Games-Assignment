@@ -301,7 +301,11 @@ This Java program finds pairs and combinations in an array of integers based on 
 ### Time and Space Complexity Analysis
 - <b> ArraySumPairByHashMap</b>
   <b>1. `findTwoSumCombination` method: </b>
-  - <b> Time complexity: </b> O(n), where n is the length of the input array `nums`.
-  - <b> Space Complexity:</b>  O(n), where n is the length of the input array `nums`. It uses a HashMap and a List to store the combinations, which can grow up to the size of the input array.
+- <b> Time Complexity: </b> O(n), where n is the length of the input array `nums`.
+- <b> Space Complexity:</b>  O(n), where n is the length of the input array `nums`. It uses a HashMap and a List to store the combinations, which can grow up to the size of the input array.
 
-<b> 2. 
+<b> 2. `findDoubleTargetCombination`  method: </b>
+ - <b> Time complexity:</b> O(2^n), where n is the length of the input array `nums`. This is because the method uses a recursive approach that explores all possible combinations.
+  - <b> Space Complexity:</b>  O(2^n), where n is the length of the input array nums. This is because the method uses a recursive approach that creates a new combination list for each recursion.
+
+Overall,the time and space complexity of the program is dominated by the `findDoubleTargetCombination` method.
